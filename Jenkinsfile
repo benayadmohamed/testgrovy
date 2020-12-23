@@ -1,4 +1,4 @@
-
+def aaa= "${env.WORKSPACE}/data"
 pipeline {
     agent any
 
@@ -15,7 +15,7 @@ pipeline {
         stage('Hello') {
             steps {
                 sh'ls .'
-                sh "cat ${env.WORKSPACE}/data"
+                echo "${aaa}"
                 echo " ${env.WORKSPACE}/data"
                 echo 'Hello World'
             }
