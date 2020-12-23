@@ -15,8 +15,8 @@ pipeline {
         stage('Hello') {
             steps {
                 sh'ls .'
-                sh "cat ${env.WORKSPACE}/data"
-                echo "${env.WORKSPACE}/data"
+                sh "cat ${workspace}/data"
+                echo "${workspace}/data"
                 echo 'Hello World'
             }
         }
