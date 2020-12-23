@@ -6,7 +6,7 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : './data.groovy'
+            groovyScriptFile : ./data.groovy
             )
     }
 
