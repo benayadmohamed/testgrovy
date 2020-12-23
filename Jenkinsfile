@@ -6,7 +6,7 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : "${env.WORKSPACE}/data"
+            groovyScriptFile : "/var/snap/jenkins/1687/workspace/testpp/data"
             )
     }
 
