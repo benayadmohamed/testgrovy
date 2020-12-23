@@ -1,3 +1,4 @@
+def workspace = pwd()
 pipeline {
     agent any
 
@@ -6,7 +7,7 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : "/var/snap/jenkins/1687/workspace/testpp/data"
+            groovyScriptFile : "${workspace}/data"
             )
     }
 
