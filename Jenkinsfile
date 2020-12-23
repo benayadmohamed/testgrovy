@@ -13,6 +13,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                sh'ls .'
                 echo 'Hello World'
             }
         }
