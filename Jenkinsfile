@@ -1,4 +1,4 @@
-def workspace = pwd()
+
 pipeline {
     agent any
 
@@ -7,7 +7,7 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : "${workspace}/data"
+            groovyScriptFile : "${pwd()}/data"
             )
     }
 
@@ -15,8 +15,8 @@ pipeline {
         stage('Hello') {
             steps {
                 sh'ls .'
-                sh "cat ${workspace}/data"
-                echo "${workspace}/data"
+                sh "cat ${pwd()}/data"
+                echo "${pwd()}/data"
                 echo 'Hello World'
             }
         }
