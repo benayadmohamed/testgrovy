@@ -1,13 +1,13 @@
 
 pipeline {
-    agent any
+    agent node
 
     parameters {
     extendedChoice(
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : "${pwd()}/data"
+            groovyScriptFile : " ${env.WORKSPACE}/data"
             )
     }
 
@@ -15,8 +15,8 @@ pipeline {
         stage('Hello') {
             steps {
                 sh'ls .'
-                sh "cat ${pwd()}/data"
-                echo "${pwd()}/data"
+                sh "cat ${env.WORKSPACE}/data"
+                echo " ${env.WORKSPACE}/data"
                 echo 'Hello World'
             }
         }
