@@ -8,7 +8,9 @@ pipeline {
             description: 'dddd',
             type: 'PT_JSON',
             groovyScript : '''
-            evaluate(new File("./data.groovy"))
+            GroovyShell shell = new GroovyShell()
+            def tools = shell.parse(new File('./data.groovy'))
+              println tools.jsonEditorOptions
             '''
             //groovyScriptFile : "${env.WORKSPACE}/data"
             )
