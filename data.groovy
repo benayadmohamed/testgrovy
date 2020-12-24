@@ -294,3 +294,4 @@ def jsonEditorOptions = JSONObject.fromObject(/{
 }
 
 }/);
+return jsonEditorOptions
