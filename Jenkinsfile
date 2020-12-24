@@ -18,8 +18,6 @@ pipeline {
         stage('Hello') {
             steps {
                 sh'ls .'
-                echo "${aaa}"
-                echo " ${env.WORKSPACE}/data"
                 echo 'Hello World'
             }
         }
