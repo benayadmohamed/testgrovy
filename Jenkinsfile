@@ -10,7 +10,7 @@ pipeline {
             groovyScript : '''
             GroovyShell shell = new GroovyShell()
             def tools = shell.parse(new File('./data.groovy'))
-              println tools.jsonEditorOptions
+             return tools.jsonEditorOptions
             '''
             //groovyScriptFile : "${env.WORKSPACE}/data"
             )
