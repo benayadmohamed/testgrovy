@@ -7,12 +7,12 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScript : '''
+         /*   groovyScript : '''
             GroovyShell shell = new GroovyShell()
             def tools = shell.parse(new File('./data.groovy'))
              return tools.jsonEditorOptions
-            '''
-            //groovyScriptFile : "${env.WORKSPACE}/data"
+            '''*/
+            groovyScriptFile : "${sh(script: 'pwd', , returnStdout: true).trim()}/data"
             )
     }
 
