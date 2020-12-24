@@ -1,4 +1,4 @@
-def aaa= "${env.WORKSPACE}/data"
+
 pipeline {
     agent any
 
@@ -7,7 +7,10 @@ pipeline {
             name: 'someName',
             description: 'dddd',
             type: 'PT_JSON',
-            groovyScriptFile : "${env.WORKSPACE}/data"
+            groovyScript : '''
+            evaluate(new File("./data.groovy"))
+            '''
+            //groovyScriptFile : "${env.WORKSPACE}/data"
             )
     }
 
